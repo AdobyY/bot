@@ -1,18 +1,17 @@
 from chatterbot import ChatBot
 from chatterbot.trainers import ListTrainer
-from cleaner import clean_corpus
 
 import logging
 logger = logging.getLogger()
 logger.setLevel(logging.CRITICAL)
 
-CORPUS_FILE = 'chat.txt'
+CORPUS_FILE = 'new_file.txt'
 
 chatbot = ChatBot('Chatbot')
 
 trainer = ListTrainer(chatbot)
-cleaned_corpus = clean_corpus(CORPUS_FILE)
-trainer.train(cleaned_corpus)
+
+trainer.train(CORPUS_FILE)
 
 exit_conditions = (':q', 'quit', 'exit')
 while True:
