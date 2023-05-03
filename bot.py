@@ -1,12 +1,11 @@
 from chatterbot import ChatBot
 from chatterbot.trainers import ListTrainer
-#from cleaner import clean_corpus
 
 import logging
 logger = logging.getLogger()
 logger.setLevel(logging.CRITICAL)
 
-CORPUS_FILE = 'chat.txt'
+CORPUS_FILE = 'new_file.txt'
 
 chatbot = ChatBot('Chatbot')
 
